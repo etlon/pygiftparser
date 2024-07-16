@@ -146,7 +146,7 @@ class Option:
 
     def _extract_parts(self, raw_text):
         if raw_text:
-            pattern = re.compile(r'^[#=~](%(-{0,1}[0-9]+)%)?(.+)$')
+            pattern = re.compile(r'^[#=~](%(-{0,1}[0-9]+\.?[0-9]*)%)?(.+)$')
             match = pattern.match(raw_text)
             if match:
                 prefix = raw_text[0]
