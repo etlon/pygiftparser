@@ -152,7 +152,7 @@ class Option:
                 prefix = raw_text[0]
                 text = match.group(3)
                 if match.group(2):
-                    percentage = int(match.group(2))/100
+                    percentage = int(float(match.group(2)))/100
                 elif prefix == '=' or prefix == '#':
                     percentage  = 1.0
                 else:
